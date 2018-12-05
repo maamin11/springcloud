@@ -1,24 +1,25 @@
-spring:
-  application:
-    name: service-hi
-server:
-  servlet:
-    context-path: /hi-client
----
 server:
   port: 8764
+  servlet:
+      context-path: /hi1-client
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 spring:
   profiles: hi1
+  application:
+    name: service-hi1
 ---
 server:
   port: 8765
+  servlet:
+        context-path: /hi2-client
 eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
 spring:
   profiles: hi2
+  application:
+      name: service-hi2

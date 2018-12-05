@@ -10,8 +10,8 @@ eureka:
 zuul:
   routes:
     api-a:
-      path: /hi-client/**
-      serviceId: service-ribbon
+      path: /api-a/**
+      serviceId: service-hi1
     api-b:
-      path: /user-client/**
-      serviceId: service-feign
+      path: /api-b/**
+      serviceId: service-hi2
